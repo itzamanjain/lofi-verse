@@ -33,6 +33,12 @@ const MainSection = () => {
         Top Albums
       </h2>
       <Slider data={albums}/>
+      <h2 className="text-xl px-5 py-3 font-semibold text-gray-700 w-full lg:w-[78vw] mx-auto">
+        Trending Now
+      </h2>
+      <Slider data={trendingAlbums} />
+      <Slider data={albums}/>
+      
     </section>
   );
 };
