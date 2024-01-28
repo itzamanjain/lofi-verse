@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 
 const SearchSection = () => {
   const { searchedSongs } = useContext(MusicContext);
-
+  const gohome = () => {
+    window.location.href = "/";
+  }
   return (
     <div
       className={`fixed left-0 right-0 bottom-0 top-0 flex justify-center items-center flex-wrap gap-4 bg-white bg-opacity-50 backdrop-blur-lg ${
@@ -15,7 +17,7 @@ const SearchSection = () => {
       {searchedSongs?.map((song) => (
         <SongItem key={song.id} {...song} />
       ))}
-      <Link className="text-3xl ml-10 " to="/">X</Link>
+      <button onClick={gohome} className="text-3xl border-2 border-black rounded-full h-9 w-9 ">X</button>
     </div>
   );
 };
