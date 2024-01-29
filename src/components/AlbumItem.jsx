@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const AlbumItem = ({ name, artists, id, image, title }) => {
+const AlbumItem = ({ name, artists, id, image }) => {
   return (
     <Link
       to={`/albums/${id}`}
